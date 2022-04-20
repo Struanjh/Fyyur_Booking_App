@@ -23,7 +23,8 @@ app.config.from_object('config.productionConfig')
 db = SQLAlchemy(app)
 
 # TODO: connect to a local postgresql database (using the productionConfig class)
-app.config['SQLALCHEMY_DATABASE_URI'] = productionConfig.SQLALCHEMY_DATABASE_URI
+#Validate connection is set
+print(app.config['SQLALCHEMY_DATABASE_URI'])
 
 #----------------------------------------------------------------------------#
 # Models.

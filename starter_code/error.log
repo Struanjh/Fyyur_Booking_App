@@ -1,1 +1,38 @@
 
+2022-04-20 13:46:47,374 INFO: errors [in /Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py:508]
+2022-04-20 13:47:14,292 ERROR: Exception on /shows [GET] [in /Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py", line 471, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/templates/pages/shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/templates/pages/shows.html", line 9, in block 'content'
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py", line 67, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/dateutil/parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/env/lib/python3.10/site-packages/dateutil/parser.py", line 587, in parse
+    if (isinstance(tzinfos, collections.Callable) or
+AttributeError: module 'collections' has no attribute 'Callable'
+2022-04-20 14:07:43,136 INFO: errors [in /Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py:508]
+2022-04-20 14:08:29,980 INFO: errors [in /Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py:509]
+2022-04-20 14:09:57,130 INFO: errors [in /Users/Struan/Software_Dev/Udacity_FullStack_Nano-Degree/Unit2_SQL_Data_Modelling/Fyyur_Booking_Site/starter_code/app.py:509]
