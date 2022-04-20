@@ -1,5 +1,6 @@
 from datetime import datetime
 from flask_wtf import Form
+##Allows Flask Forms to know how to handle each of these field types
 from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField
 from wtforms.validators import DataRequired, AnyOf, URL
 

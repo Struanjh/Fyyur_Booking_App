@@ -12,16 +12,18 @@ import logging
 from logging import Formatter, FileHandler
 from flask_wtf import Form
 from forms import *
-#----------------------------------------------------------------------------#
+from config import config
 # App Config.
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
 moment = Moment(app)
-app.config.from_object('config')
+#Load the config class from config file
+app.config.from_object('config.productionConfig')
 db = SQLAlchemy(app)
 
-# TODO: connect to a local postgresql database
+# TODO: connect to a local postgresql database (using the productionConfig class)
+app.config['SQLALCHEMY_DATABASE_URI'] = productionConfig.SQLALCHEMY_DATABASE_URI
 
 #----------------------------------------------------------------------------#
 # Models.
